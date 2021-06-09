@@ -1,10 +1,39 @@
 'use strict';
 
 const events=require('./events.js');
-const {vendors}=require('./statesOfPackages/vendors.js')
-const {driver}=require('./statesOfPackages/driver.js')
+require('./statesOfPackages/vendors.js')
+require('./statesOfPackages/driver.js')
 
 
-events.on('pickup',vendors.monitorData);
-events.on('delivered',driver.monitorDelivered);
-events.on('in-transit',driver.monitorInTransit);
+events.on('pickup',monitorData);
+events.on('delivered',monitorDelivered);
+events.on('in-transit',monitorInTransit);
+
+
+
+function monitorData(payload){
+    console.log( 'EVENT',
+    {event: 'pickup',
+    time: new Date(),
+    payload
+});
+}
+
+
+function monitorDelivered(payload){
+    console.log( 'EVENT',
+    {event: 'delivered',
+    time: new Date(),
+    payload
+})
+}
+
+
+
+function monitorInTransit(payload){
+    console.log( 'EVENT',
+    {event: 'in-transit',
+    time: new Date(),
+    payload
+})  
+}

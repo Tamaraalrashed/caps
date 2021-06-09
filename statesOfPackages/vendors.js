@@ -6,40 +6,26 @@ const events = require('../events.js');
 let storeName = process.env.STORE_NAME; // amman branch
 
 
-events.emit('pickup',{order:payload}) ;
-
-
-setInterval(() => {
+  setInterval(() => {
     let order={
-        storeName:storeName,
+        store:storeName,
         orderID:faker.datatype.uuid(), 
         customer: faker.name.findName(),
          address:faker.address.city()
     }
-    return order
+    events.emit('pickup',order) ;
 }, 5000);
+  
 
-
-function monitorData(payload){
-    console.log( 'EVENT',
-    {event: 'pickup',
-    time: new Date(),
-    payload: setInterval()});
-}
 
 
 function deliveredHandler(order){
-    console.log(`Thank you${order.customer}`);
+    console.log(`Thank you ${order.customer}`);
 };
 
 
 
-
-
-
-
-module.exports={deliveredHandler,monitorData};
-
+events.on('delivered',deliveredHandler)
 
 
 // EVENT { event: 'pickup',
