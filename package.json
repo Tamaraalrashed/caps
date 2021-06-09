@@ -1,0 +1,26 @@
+{
+  "name": "caps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tamaraalrashed/caps.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tamaraalrashed/caps/issues"
+  },
+  "homepage": "https://github.com/Tamaraalrashed/caps#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "faker": "^5.5.3",
+    "jest": "^27.0.4"
+  }
+}
