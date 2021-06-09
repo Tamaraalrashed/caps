@@ -4,9 +4,9 @@ CAPS will simulate a delivery service where vendors (such a flower shops) will s
 
 ### Auhtor : Tamara Alrashed
 
-### [RepoLink]() 
+### [RepoLink](https://github.com/Tamaraalrashed/caps) 
 
-### [PR]()
+### [PR](https://github.com/Tamaraalrashed/caps/pull/1)
 
 <br>
 
